@@ -20,12 +20,21 @@ $(document).ready(function () {
         ],
       };
 
+      const tooltip = {
+        callbacks: {
+          title: function (context) {
+            return "Tooltip title";
+          },
+        },
+      };
+
       const plugins = {
         title: {
           display: true,
           text: arg.mainTitle,
           color: arg.mainTitleColor,
         },
+        tooltip: tooltip,
       };
 
       const config = {
