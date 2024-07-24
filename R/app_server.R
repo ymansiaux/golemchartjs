@@ -25,7 +25,15 @@ app_server <- function(input, output, session) {
 	observeEvent(input$showscatterplot, {
 		golem::invoke_js(
 			"scatterplotJS",
-			list()
+			list(
+				label = "My scatterplot",
+				data = purrr::transpose(
+					list(
+						x = iris$Sepal.Length,
+						y = iris$Sepal.Width
+					)
+				)
+			)
 		)
 	})
 }
