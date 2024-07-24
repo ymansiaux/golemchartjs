@@ -25,6 +25,14 @@ $(document).ready(function () {
           title: function (context) {
             return "Tooltip title";
           },
+          label: function (context) {
+            lab =
+              "Line number: " +
+              context.dataIndex +
+              " values: " +
+              context.formattedValue;
+            return lab;
+          },
         },
       };
 
