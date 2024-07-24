@@ -21,4 +21,11 @@ app_server <- function(input, output, session) {
 			)
 		)
 	})
+
+	observeEvent(input$showscatterplot, {
+		golem::invoke_js(
+			"scatterplotJS",
+			list()
+		)
+	})
 }

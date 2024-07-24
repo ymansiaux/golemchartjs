@@ -17,6 +17,14 @@ app_ui <- function(request) {
 			),
 			tags$div(
 				tags$canvas(id = "myChart")
+			),
+			h1("Scatterplot"),
+			actionButton(
+				inputId = "showscatterplot",
+				label = "Show Scatterplot"
+			),
+			tags$div(
+				tags$canvas(id = "myChart2")
 			)
 		)
 	)
