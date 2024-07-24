@@ -22,6 +22,16 @@ $(document).ready(function () {
           x: {
             type: "linear",
             position: "bottom",
+            title: {
+              display: true,
+              text: arg.xAxisTitle,
+            },
+          },
+          y: {
+            title: {
+              display: true,
+              text: arg.yAxisTitle,
+            },
           },
         },
       },

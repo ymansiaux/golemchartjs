@@ -32,7 +32,9 @@ app_server <- function(input, output, session) {
 						x = iris$Sepal.Length,
 						y = iris$Sepal.Width
 					)
-				)
+				),
+				xAxisTitle = "Sepal Length",
+				yAxisTitle = "Sepal Width"
 			)
 		)
 	})
