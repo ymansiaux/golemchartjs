@@ -5,5 +5,20 @@
 #' @import shiny
 #' @noRd
 app_server <- function(input, output, session) {
-  # Your application server logic
+	observeEvent(input$showbarplot, {
+		app_labels <- sample(letters, 5)
+		app_label <- paste0(sample(letters, 10), collapse = "")
+		app_data <- sample(1:100, 5)
+		app_borderWidth <- sample(1:5, 1)
+
+		golem::invoke_js(
+			"barchartJS",
+			list(
+				labels = app_labels,
+				label = app_label,
+				data = app_data,
+				borderWidth = app_borderWidth
+			)
+		)
+	})
 }

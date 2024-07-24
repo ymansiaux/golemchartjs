@@ -11,6 +11,10 @@ app_ui <- function(request) {
 		# Your application UI logic
 		fluidPage(
 			h1("golemchartjs"),
+			actionButton(
+				inputId = "showbarplot",
+				label = "Show Barplot"
+			),
 			tags$div(
 				tags$canvas(id = "myChart")
 			)
