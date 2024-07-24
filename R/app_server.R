@@ -34,7 +34,11 @@ app_server <- function(input, output, session) {
 					)
 				),
 				xAxisTitle = "Sepal Length",
-				yAxisTitle = "Sepal Width"
+				yAxisTitle = "Sepal Width",
+				mainTitle = input$scatterplot_title,
+				mainTitleColor = input$title_color,
+				pointBorderColor = "black",
+				pointBackGroundColor = input$points_background_color
 			)
 		)
 	})

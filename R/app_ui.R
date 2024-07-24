@@ -19,6 +19,23 @@ app_ui <- function(request) {
 				tags$canvas(id = "myChart")
 			),
 			h1("Scatterplot"),
+			textInput(
+				inputId = "scatterplot_title",
+				label = "Scatterplot Title",
+				value = "ChartJS rocks !"
+			),
+			selectInput(
+				inputId = "title_color",
+				label = "Title Color",
+				choices = c("brown", "orange", "purple"),
+				selected = "brown"
+			),
+			selectInput(
+				inputId = "points_background_color",
+				label = "Points Background Color",
+				choices = c("red", "blue", "green"),
+				selected = "red"
+			),
 			actionButton(
 				inputId = "showscatterplot",
 				label = "Show Scatterplot"

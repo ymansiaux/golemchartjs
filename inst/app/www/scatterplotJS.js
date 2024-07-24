@@ -9,15 +9,25 @@ $(document).ready(function () {
         {
           label: arg.label,
           data: arg.data,
-          backgroundColor: "rgb(255, 99, 132)",
+          borderColor: arg.pointBorderColor,
+          backgroundColor: arg.pointBackGroundColor,
         },
       ],
+    };
+
+    const plugins = {
+      title: {
+        display: true,
+        text: arg.mainTitle,
+        color: arg.mainTitleColor,
+      },
     };
 
     const config = {
       type: "scatter",
       data: data,
       options: {
+        plugins: plugins,
         scales: {
           x: {
             type: "linear",
